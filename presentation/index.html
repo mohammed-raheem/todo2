@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App Presentation</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+        overflow-x: hidden;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100vh;
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+      .content {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 30px;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #1a237e;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: contain;
+        max-height: 70vh;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      a {
+        color: #3f51b5;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #1a237e;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #1a237e;
+      }
+      .screenshot-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        .content {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="content">
+            <h1>Todo List Application</h1>
+            <p>
+              A modern, responsive web app built with React, TypeScript, and
+              Redux Toolkit. It demonstrates best practices in React
+              development, state management, and testing while providing users
+              with an efficient way to manage their tasks.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2 class="screenshot-title">Login Screen</h2>
+            <img src="./assets/login.png" alt="Login Screen" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2 class="screenshot-title">Task List</h2>
+            <img src="./assets/task-list.png" alt="Task List" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2 class="screenshot-title">Add/Edit Task</h2>
+            <img src="./assets/add.png" alt="Add/Edit Task" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2>Features</h2>
+            <ul>
+              <li>User authentication (login/logout)</li>
+              <li>Add, edit, and delete tasks</li>
+              <li>Mark tasks as complete/incomplete</li>
+              <li>Filter tasks by status (All, Completed, Pending)</li>
+              <li>Responsive design for mobile and desktop</li>
+              <li>Persistent storage using localStorage</li>
+              <li>Dark mode toggle</li>
+              <li>Multilingual support (English and Arabic)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2>Technologies and Techniques Used</h2>
+            <ul>
+              <li>React 18 with TypeScript</li>
+              <li>Redux Toolkit for state management</li>
+              <li>React Router for navigation</li>
+              <li>Material-UI (MUI) for UI components</li>
+              <li>i18next for internationalization</li>
+              <li>Vite as the build tool</li>
+              <li>Responsive design techniques</li>
+              <li>Local storage for data persistence</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2>Upcoming Features</h2>
+            <ul>
+              <li>User registration functionality</li>
+              <li>Task categories or tags</li>
+              <li>Due dates and reminders for tasks</li>
+              <li>Drag and drop functionality for task reordering</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2>External Resources</h2>
+            <ul>
+              <li>
+                Icons:
+                <a href="https://mui.com/material-ui/material-icons/"
+                  >Material-UI Icons</a
+                >
+              </li>
+              <li>
+                Fonts:
+                <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>
+                and
+                <a href="https://fonts.google.com/specimen/Cairo">Cairo</a> from
+                Google Fonts
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="content">
+            <h2>Links</h2>
+            <p>
+              GitHub Repository:
+              <a href="https://github.com/mohammed-raheem/todo2"
+                >https://github.com/mohammed-raheem/todo2</a
+              >
+            </p>
+            <p>
+              Live Web App:
+              <a href="https://todo2-wqu6.vercel.app">todo2-wqu6.vercel.app</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".swiper-container", {
+        direction: "horizontal",
+        loop: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        keyboard: {
+          enabled: true,
+        },
+      });
+    </script>
+  </body>
+</html>
